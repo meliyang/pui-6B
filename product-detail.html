@@ -68,17 +68,10 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <button id="counter-minus">-</button>
-                    <span id="counter-display">1</span>
-                    <button id="counter-plus">+</button>
-                    <!-- <form>
-                        <label for="quantity"></label>
-                        <select id="quantity" name="quantity">
-                            <option value="1">x1</option>
-                            <option value="5">x5</option>
-                            <option value="10">x10</option>
-                        </select>
-                    </form> -->
+                    <button id="counter-minus" onclick="subtractCount()">-</button>
+                    <span id="counter-display">0</span>
+                    <button id="counter-plus" onclick="addCount()">+</button>
+
                 </td>
             </tr>
             <tr><!-- row 3 -->
@@ -93,6 +86,7 @@
                             <option value="year">year</option>
                         </select>
                     </form>
+                    <img src="img/question.png" alt="help button" id="help-frequency" onclick="helpFreq()" width="10" height="10">
                 </td>
             </tr>
             <tr> <!-- row 4 -->
@@ -104,7 +98,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                <button id="addToCart">Add to cart</button>
+                <button id="addToCart" onclick="addToCart()">Add to cart</button>
                 </td>
             </tr>
 
@@ -117,5 +111,6 @@
 </body>
 <!-- javascript -->
 <script src="main.js" type="text/javascript"></script>
+
 </html>
 

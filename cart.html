@@ -29,7 +29,7 @@
             <div class="grid-item" id="cart-container">
 
               <a href="cart.html"><img src="img/shopping-cart.png" alt="shopping cart" width="50" height="50"></a>
-              <div class="centered" id="cart-count">1</div>
+              <div class="centered" id="cart-count">0</div>
             </div>
 
           </div>
@@ -52,24 +52,16 @@
 
     <div id="cart-contents">
         <table>
-            <tr id="cookie-1"> <!-- row 1 -->
-                <td><img src="img/cookie.png" alt="chocolate chip cookie" width="100" height="100"></td>
-                <td colspan="2">Chocolate chip cookie</td>
+            <tr id="cart-item"> <!-- row 1 -->
+                <td><img id = "item-1-image" src="img/night.png" alt="moon and stars image, placeholder" width="100" height="100"></td>
+                <td colspan="2" id="item-1-name">Add an item to the cart!</td>
                 <td></td>
                 <td class="counter" id="no-wrap">
-                    <!-- <form>
-                        <label for="quantity"></label>
-                        <select id="quantity" name="quantity">
-                            <option value="1">x1</option>
-                            <option value="5">x5</option>
-                            <option value="10">x10</option>
-                        </select>
-                    </form> -->
-                    <button id="counter-minus">-</button>
+                    <button id="counter-minus" onclick="subtractCount()">-</button>
                     <span id="counter-display">1</span>
-                    <button id="counter-plus">+</button>
+                    <button id="counter-plus" onclick="addCount()">+</button>
                 </td>
-                <td> / </td>
+                <td id="slash"> / </td>
                 <td>
                     <form>
                         <label for="frequency"></label>
@@ -80,9 +72,9 @@
                         </select>
                     </form>
                 </td>
-                <td>$<span id="cookie-total">1</span>.00</td>
-                <td>
-                    <button type="button" onclick='remove()'>Remove</button>
+                <td class="item-price">$<span id="item-1-total">0</span>.00</td>
+                <td class="button-remove">
+                    <button type="button" onclick='removeFromCart()'>Remove</button>
                 </td>
             </tr>
             <tr> <!-- row 2 -->
@@ -101,7 +93,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                    Total $<span id="total">1</span>.00
+                    Total $<span id="total">0</span>.00
                 </td>
             </tr>
             <tr> <!-- row 5-->
