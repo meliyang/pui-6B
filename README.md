@@ -10,6 +10,7 @@ Cart page: cart.html
 
 
 
-New features: adding/subtracting quantities of items, changing the frequency, removing items (on cart page), number next to cart reflects number of items in cart
+New features: adding/subtracting quantities of items, changing the frequency, removing items (on cart page), number next to cart reflects number of items in cart; all use local storage and classes
 
-TODO: local storage
+Small tweaks: added text under images on product-browsing page, added image and text when there's no items in cart on cart page
+
