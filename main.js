@@ -14,7 +14,7 @@ var cookieTotal = document.getElementById('cookie-total');
 var cartTotal = document.getElementById('total');
 let helpElem = document.getElementById('help-frequency'); // Help on product-detail.html (frequency)
 
-
+// add and subtract for counter buttons
 function addCount() {
   count++;
   counterDisplayElem.innerHTML = count;
@@ -24,6 +24,7 @@ function subtractCount() {
   counterDisplayElem.innerHTML = count;
 }
 
+// updates the # of items in the cart in the top right of the screen (on all pages)
 function updateCartCount() {
   let cartTmp = JSON.parse(localStorage.getItem("cart-storage"));
   if (cartTmp != null) {
@@ -59,6 +60,8 @@ function updateTotal() {
   }
 
 }
+
+// add an item to cart
 function addToCart() {
   let q = counterDisplayElem.innerHTML;
   let frequencyElem = document.getElementById("frequency");
@@ -108,8 +111,8 @@ function Cart(items, total) {
   this.total = total;
 }
 
+// remove an item from the cart
 function removeFromCart() {
-
   if (confirm("Are you sure you want to delete this item?")) {
     let cartTmp = JSON.parse(localStorage.getItem("cart-storage"));
     console.log(cartTmp);
@@ -119,11 +122,10 @@ function removeFromCart() {
     updateTotal();
     loadCart();
     updateCartCount();
-
   }
-
 }
 
+// fills in the table on cart.html
 function loadCart() {
   let cartTmp = JSON.parse(localStorage.getItem("cart-storage"));
   console.log("loadCart() cartTmp:", cartTmp);
@@ -160,19 +162,15 @@ function loadCart() {
     updateCartCount();
   }
 }
-// all.html
-myCart = new Cart([], 0);
-
-
-
-
-// product-detail.html --
-
 
 function helpFreq() {
   console.log("clicked help button");
   alert("Frequency of subscription --\n\nday: shipped every day at 8 am\nweek: shipped every week on Monday\nmonth: shipped every month on the first day of each month");
 }
+
+
+// all.html
+myCart = new Cart([], 0);
 
 
 // cart.html --
